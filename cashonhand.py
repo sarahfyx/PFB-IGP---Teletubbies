@@ -39,12 +39,14 @@ with fp_read.open(mode ='r', encoding = "UTF-8", newline = "") as file:
         empty_list2.append(float(row[1]))
 
 
-# assigning the value of the 2nd item (41.0) to day_1
-day_1 = empty_list1[1]
+# assigning the value of the 2nd item (41.0) to day41
+day41 = empty_list1[1]
+# assigning the value of the 9th item (48.0) to day48
+day48 = empty_list1[8]
+
 # assigning the result of subtracting day 41's cash on hand value from day 40's value on to cash_deficit1
 cash_deficit1 = empty_list2[0] - empty_list2[1]
-# assigning the value of the 9th item (48.0) to day_2
-day_2 = empty_list1[8]
+
 # assigning the result of subtracting day 48's cash on hand value from day 47 to cash_deficit2
 cash_deficit2 = empty_list2[7] - empty_list2[8]
 
@@ -52,5 +54,5 @@ cash_deficit2 = empty_list2[7] - empty_list2[8]
 # using mode = "a" to append the cash deficit (scenario 2) to summary_report.txt
 with fp_write.open(mode = "a") as file:
     # using writelines method to append the 2 lines for cash deficit (scenario 2) to summary_report.txt
-    file.writelines(f"\n[CASH DEFICIT] DAY: {empty_list1[1]} , AMOUNT: USD{cash_deficit1}"
-    f"\n[CASH DEFICIT] DAY: {empty_list1[8]} , AMOUNT: USD{cash_deficit2}")
+    file.writelines(f"\n[CASH DEFICIT] DAY: {day41} , AMOUNT: USD{cash_deficit1}"
+    f"\n[CASH DEFICIT] DAY: {day48} , AMOUNT: USD{cash_deficit2}")

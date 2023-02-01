@@ -41,8 +41,8 @@ with fp_read.open(mode ='r', encoding = "UTF-8", newline = "") as file:
         empty_list2.append(float(row[4]))
 
 
-# assigning the value of the 2nd item (41.0) to day
-day = empty_list1[1]
+# assigning the value of the 2nd item (41.0) to day41
+day41 = empty_list1[1]
 
 # assigning the result of subtracting day 41's net profit from day 40's net profit to profit_deficit
 profit_deficit = empty_list2[0] - empty_list2[1]
@@ -51,4 +51,4 @@ profit_deficit = empty_list2[0] - empty_list2[1]
 # using mode = "a" to append the profit deficit (scenario 2) to summary_report.txt
 with fp_write.open(mode = "a") as file:
     # using writelines method to append the profit deficit (scenario 2) to summary_report.txt
-    file.writelines(f"\n[PROFIT DEFICIT] DAY: {empty_list1[1]}, AMOUNT: USD{profit_deficit}")
+    file.writelines(f"\n[PROFIT DEFICIT] DAY: {day41}, AMOUNT: USD{profit_deficit}")

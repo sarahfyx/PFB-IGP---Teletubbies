@@ -43,14 +43,6 @@ with fp_write.open(mode = "w", encoding = "UTF-8", newline = "") as file:
     # writing the salary expense to the file (scenario 1)
     file.write(f"[HIGHEST OVERHEADS] SALARY EXPENSE: {salary_expense}%")
 
-# creating a list for cash surplus and net profit surplus (scenario 1)
-surplus_data =  ["\n[CASH SURPLUS] CASH ON EACH DAY IS HIGHER THAN PREVIOUS DAY"
-            "\n[NET PROFIT SURPLUS] NET PROFIT ON EACH DAY IS HIGHER THAN PREVIOUS DAY"]
-
-# using mode = "a" to append the surplus data to summary_report.txt
-with fp_write.open(mode = "a") as file:
-    # using writelines method to append multiple lines from surplus_data to summary_report.txt
-    file.writelines(surplus_data)
 
 # assigning the value of the seventh item in the empty_list to the variable depreciation_expense
 depreciation_expense = empty_list[6]
@@ -58,7 +50,7 @@ depreciation_expense = empty_list[6]
 # using mode = "a" to append the highest overheads (scenario 2) to summary_report.txt
 with fp_write.open(mode = "a") as file:
     # using writelines method to append the line for highest overheads (scenario 2) to summary_report.txt
-    file.writelines(f"\n\n\n[HIGHEST OVERHEADS] DEPRECIATION EXPENSE: {depreciation_expense}%")
+    file.writelines(f"\n\n[HIGHEST OVERHEADS] DEPRECIATION EXPENSE: {depreciation_expense}%")
 
 
 
