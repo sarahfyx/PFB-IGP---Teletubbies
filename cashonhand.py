@@ -21,9 +21,9 @@ def cashonhand():
     # creating above txt file
     fp_write.touch()
 
-# creating 2 empty lists
-empty_list1 = []
-empty_list2 = []
+# creating 2 empty lists, day and coh
+day = []
+coh = []
 
 # open file with .open() to return a file object
 with fp_read.open(mode ='r', encoding = "UTF-8", newline = "") as file:
@@ -34,21 +34,21 @@ with fp_read.open(mode ='r', encoding = "UTF-8", newline = "") as file:
     # iterating each row with a for loop
     for row in reader:
         # converting the values in the first row (day) to a float and append it to the empty list
-        empty_list1.append(float(row[0]))
+        day.append(float(row[0]))
         # converting the values in the second row (cash on hand) to a float and append it to the empty list
-        empty_list2.append(float(row[1]))
+        coh.append(float(row[1]))
 
 
 # assigning the value of the 2nd item (41.0) to day41
-day41 = empty_list1[1]
+day41 = day[1]
 # assigning the value of the 9th item (48.0) to day48
-day48 = empty_list1[8]
+day48 = day[8]
 
 # assigning the result of subtracting day 41's cash on hand value from day 40's value on to cash_deficit1
-cash_deficit1 = empty_list2[0] - empty_list2[1]
+cash_deficit1 = coh[0] - coh[1]
 
 # assigning the result of subtracting day 48's cash on hand value from day 47 to cash_deficit2
-cash_deficit2 = empty_list2[7] - empty_list2[8]
+cash_deficit2 = coh[7] - coh[8]
 
 
 # using mode = "a" to append the cash deficit (scenario 2) to summary_report.txt
