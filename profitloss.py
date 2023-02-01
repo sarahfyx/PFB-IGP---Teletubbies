@@ -22,9 +22,9 @@ def profitloss():
     fp_write.touch()
 
 
-# creating 2 empty lists
-empty_list1 = []
-empty_list2 = []
+# creating 2 empty lists, day and net_profit
+day = []
+net_profit = []
 
 
 # open file with .open() to return a file object
@@ -36,16 +36,16 @@ with fp_read.open(mode ='r', encoding = "UTF-8", newline = "") as file:
     # iterating each row with a for loop
     for row in reader:
         # converting the values in the first row (day) to a float and append it to the empty list
-        empty_list1.append(float(row[0]))
+        day.append(float(row[0]))
         # converting the values in the fifth row (net profit) to a float and append it to the empty list
-        empty_list2.append(float(row[4]))
+        net_profit.append(float(row[4]))
 
 
 # assigning the value of the 2nd item (41.0) to day41
-day41 = empty_list1[1]
+day41 = day[1]
 
 # assigning the result of subtracting day 41's net profit from day 40's net profit to profit_deficit
-profit_deficit = empty_list2[0] - empty_list2[1]
+profit_deficit = net_profit[0] - net_profit[1]
 
 
 # using mode = "a" to append the profit deficit (scenario 2) to summary_report.txt

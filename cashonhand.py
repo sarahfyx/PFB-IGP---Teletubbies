@@ -54,5 +54,5 @@ cash_deficit2 = empty_list2[7] - empty_list2[8]
 # using mode = "a" to append the cash deficit (scenario 2) to summary_report.txt
 with fp_write.open(mode = "a") as file:
     # using writelines method to append the 2 lines for cash deficit (scenario 2) to summary_report.txt
-    file.writelines(f"\n[CASH DEFICIT] DAY: {day41} , AMOUNT: USD{cash_deficit1}"
-    f"\n[CASH DEFICIT] DAY: {day48} , AMOUNT: USD{cash_deficit2}")
+    file.writelines(f"\n[CASH DEFICIT] DAY: {day41}, AMOUNT: USD{cash_deficit1}"
+    f"\n[CASH DEFICIT] DAY: {day48}, AMOUNT: USD{cash_deficit2}")
