@@ -58,7 +58,6 @@ cash_deficit2 = coh[3] - coh[4]
 # assigning the result of subtracting day 48's cash on hand value from day 47 to cash_deficit3
 cash_deficit3 = coh[7] - coh[8]
 
-
 # using mode = "a" to append the cash deficits to summary_report.txt
 with fp_write.open(mode = "a") as file:
     # using writelines method to append the 3 lines for cash deficit to summary_report.txt
